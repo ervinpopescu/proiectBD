@@ -56,7 +56,7 @@ CREATE TABLE tblInchiriere (
 CREATE TABLE tblPlata (
     idPlata INT(10) ZEROFILL UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     tipPlata ENUM("card", "cash"),
-    idInchiriere INT ZEROFILL UNSIGNED NOT NULL,
+    idInchiriere INT(10) ZEROFILL UNSIGNED NOT NULL,
     suma DECIMAL(7,2),
     statusPlata ENUM("achitata", "neachitata"),
     CONSTRAINT fk_inchiriere FOREIGN KEY (idInchiriere) REFERENCES tblInchiriere(idInchiriere) ON DELETE CASCADE ON UPDATE CASCADE
