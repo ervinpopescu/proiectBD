@@ -131,3 +131,13 @@ SELECT * FROM tblInchiriere ORDER BY idInchiriere;
 
 DESCRIBE tblPlata;
 SELECT * FROM tblPlata;
+
+SELECT * FROM tblInchiriere WHERE idClient = 1;
+
+SELECT * FROM tblInchiriere WHERE idMasina = 3;
+
+SELECT * FROM tblInchiriere WHERE idLocatieInchiriere = 5;
+
+SELECT * FROM tblInchiriere WHERE idLocatiePredare = 5;
+
+SELECT * FROM tblPlata WHERE idInchiriere = 3;
