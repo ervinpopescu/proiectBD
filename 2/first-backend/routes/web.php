@@ -3,10 +3,10 @@
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\InchiriereController;
 use App\Http\Controllers\LocatieController;
-use App\Http\Controllers\LocatieMasinaController;
 use App\Http\Controllers\PlataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MasinaController;
+use App\Http\Controllers\LocatieMasinaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,8 +39,6 @@ Route::put('/clienti', [ClientController::class, 'update']);
 Route::post('/clienti', [ClientController::class, 'store']);
 Route::delete('/clienti/{id}', [ClientController::class, 'destroy']);
 
-Route::get('/locatie', [LocatieMasinaController::class, 'index']);
-
 Route::get('/locatii', [LocatieController::class, 'index']);
 Route::get('/locatii/{id}', [LocatieController::class, 'show']);
 Route::put('/locatii', [LocatieController::class, 'update']);
@@ -61,3 +59,5 @@ Route::delete('/inchirieri', [InchiriereController::class, 'destroy']);
 
 Route::get('/plati/client/{id}', [PlataController::class, 'showClient']);
 Route::get('/inchirieri/client/{id}', [InchiriereController::class, 'showClient']);
+
+Route::get('/locatie', [LocatieMasinaController::class, 'index']);
